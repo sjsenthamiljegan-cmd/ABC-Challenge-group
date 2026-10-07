@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Random Color</title>
+        <style>
+         body {
+  background-color: grey;
+}
+
+h3 {
+  color: green;
+}
+
+.blue-heading {
+  color: blue;
+}
+
+.red-heading {
+  color: red;
+}
+        </style>
+    </head>
+    <body>
+        <h3 class="blue-heading">Heading 1</h3>
+<h3 class="blue-heading">Heading 2</h3>
+<h3 class="blue-heading">Heading 3</h3>
+
+<h3 class="red-heading">Heading 4</h3>
+        <script>
+           function randomColor() {
+  const colors = ["green", "blue", "red"];
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+}
+
+const headings = document.querySelectorAll("h3");
+
+headings.forEach((heading) => {
+  heading.addEventListener("click", () => {
+    heading.style.color = randomColor();
+  });
+});
+        </script>
+    </body>
+</html>
